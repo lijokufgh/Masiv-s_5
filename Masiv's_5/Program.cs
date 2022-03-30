@@ -1,13 +1,12 @@
 ﻿using System.Diagnostics;
 
 Stopwatch stopWatch = new Stopwatch();
-int[] mas = { 2, 13, 21312, 21321, 352, 547, 65, 85, 54, 432, 8, 54 };
-/*int[] mas = new int[10001];
+int[] mas = new int[10];
 Random Rnd = new Random();
 for (int i = 0; i < mas.Length; i++)
 {
     mas[i] = Rnd.Next(0, 10000);
-}*/
+}
 Console.Write("Не отсортированный массив: ");
 for (int i = 0; i < mas.Length; i++) Console.Write($"{mas[i]} ");
 Console.WriteLine();
