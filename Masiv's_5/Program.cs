@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 
-Stopwatch stopWatch = new Stopwatch();
+Stopwatch stopWatch = new Stopwatch(); // Класс для посчёта времяни.
 int[] mas = new int[10];
-Random Rnd = new Random();
+Random Rnd = new Random(); // Класс для рандомного числа.
 for (int i = 0; i < mas.Length; i++)
 {
     mas[i] = Rnd.Next(0, 10000);
@@ -10,30 +10,30 @@ for (int i = 0; i < mas.Length; i++)
 Console.Write("Не отсортированный массив: ");
 for (int i = 0; i < mas.Length; i++) Console.Write($"{mas[i]} ");
 Console.WriteLine();
-
-// Сортировка выбором???
-int[] mas1 = mas;
 int swap;
-stopWatch.Start();
-for (int i = 0; i < mas1.Length - 1; i++)
-{
-    for (int j = i + 1; j < mas1.Length; j++)
-    {
-        if (mas1[i] < mas1[j])
-        {
-            swap = mas1[i];
-            mas1[i] = mas1[j];
-            mas1[j] = swap;
-        }
-    }
-}
-stopWatch.Stop();
-Console.Write("\nСортировка выбором???");
-Console.Write("\nОтсортированный массив: ");
-for (int i = 0; i < mas1.Length; i++) Console.Write($"{mas1[i]} ");
-Console.Write("\nСкорость выполнения: ");
-Console.Write(stopWatch.Elapsed);
-stopWatch.Reset();
+
+//// Сортировка выбором???
+//int[] mas1 = mas;
+//stopWatch.Start();
+//for (int i = 0; i < mas1.Length - 1; i++)
+//{
+//    for (int j = i + 1; j < mas1.Length; j++)
+//    {
+//        if (mas1[i] < mas1[j])
+//        {
+//            swap = mas1[i];
+//            mas1[i] = mas1[j];
+//            mas1[j] = swap;
+//        }
+//    }
+//}
+//stopWatch.Stop();
+//Console.Write("\nСортировка выбором???");
+//Console.Write("\nОтсортированный массив: ");
+//for (int i = 0; i < mas1.Length; i++) Console.Write($"{mas1[i]} ");
+//Console.Write("\nСкорость выполнения: ");
+//Console.Write(stopWatch.Elapsed);
+//stopWatch.Reset();
 
 // Сортировка пузырьковым методом.
 int[] mas2 = mas;
